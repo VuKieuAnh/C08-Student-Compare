@@ -1,3 +1,5 @@
+package model;
+
 public class Student implements Comparable<Student> {
     private String name;
     private int age;
@@ -10,7 +12,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "model.Student{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", height=" + height +
@@ -83,4 +85,8 @@ public class Student implements Comparable<Student> {
     //    public static void main(String[] args) {
 //        System.out.println("C08");
 //    }
+
+    public Student clone(){
+        return new Student(name,age,height,weight,point);
+    }
 }
